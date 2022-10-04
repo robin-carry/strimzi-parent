@@ -1,0 +1,30 @@
+apiVersion: v2
+name: strimzi-parent
+description: One Chart to Rule them all - Strimzi (Kafka Ecosystem)
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+dependencies:
+#  - name: strimzi-cluster-operator
+#    version: 0.1.0
+#    repository: "file://strimzi-cluster-operator"
+#    tags:
+#      - strimzi
+  - name: kafka-cluster
+    version: 0.1.0
+    repository: "file://kafka-cluster"
+    condition: strimzi-cluster-operator.enabled
+    tags:
+      - kafka
+  - name: kafka-connect-cluster
+    version: 0.1.0
+    repository: "file://kafka-connect-cluster"
+    condition: strimzi-cluster-operator.enabled
+    tags:
+      - kafka-connect
+  - name: kafka-ui-redpanda-console
+    version: 0.1.0
+    repository: "file://kafka-ui-redpanda-console"
+    condition: kafka-cluster.enabled
+    tags:
+      - kafka-ui

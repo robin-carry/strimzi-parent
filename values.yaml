@@ -1,0 +1,19 @@
+#-----------------------
+# GLOBAL CONFIGURATIONS
+#-----------------------
+global:
+#  strimzi-cluster-operator:
+#    enabled: true
+  kafka-cluster:
+    enabled: false
+
+##-------------------------
+## COMPONENT CONFIGURATIONS
+##-------------------------
+#strimzi-cluster-operator:
+#  strimzi-kafka-operator:
+#    kafkaConnect:
+#      image:
+#        registry: "sfplcdocker.int.repositories.cloud.sap"
+#        name: "kafka-with-hana-connector"
+#        tagPrefix: "0.31.0-sap-0.3.3"
