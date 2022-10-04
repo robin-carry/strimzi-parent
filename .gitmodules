@@ -1,3 +1,6 @@
 [submodule "strimzi-cluster-operator"]
 	path = strimzi-cluster-operator
 	url = https://github.com/robin-carry/strimzi-cluster-operator.git
+[submodule "kafka-cluster"]
+	path = kafka-cluster
+	url = https://github.com/robin-carry/kafka-cluster
