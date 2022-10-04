@@ -4,3 +4,6 @@
 [submodule "kafka-cluster"]
 	path = kafka-cluster
 	url = https://github.com/robin-carry/kafka-cluster
+[submodule "kafka-connect-cluster"]
+	path = kafka-connect-cluster
+	url = https://github.com/robin-carry/kafka-connect-cluster
