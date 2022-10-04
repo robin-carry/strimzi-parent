@@ -5,21 +5,21 @@ type: application
 version: 1.0.0
 appVersion: "1.0.0"
 dependencies:
-#  - name: strimzi-cluster-operator
-#    version: 0.1.0
-#    repository: "file://strimzi-cluster-operator"
-#    tags:
-#      - strimzi
+  - name: strimzi-kafka-operator
+    version: 0.31.0
+    repository: "https://strimzi.io/charts/"
+    tags:
+      - strimzi
   - name: kafka-cluster
     version: 0.1.0
     repository: "file://kafka-cluster"
-    condition: strimzi-cluster-operator.enabled
+    condition: strimzi-kafka-operator.enabled
     tags:
       - kafka
   - name: kafka-connect-cluster
     version: 0.1.0
     repository: "file://kafka-connect-cluster"
-    condition: strimzi-cluster-operator.enabled
+    condition: strimzi-kafka-operator.enabled
     tags:
       - kafka-connect
   - name: kafka-ui-redpanda-console

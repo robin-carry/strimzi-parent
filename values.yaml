@@ -2,18 +2,34 @@
 # GLOBAL CONFIGURATIONS
 #-----------------------
 global:
-#  strimzi-cluster-operator:
-#    enabled: true
+  strimzi-kafka-operator:
+    enabled: true
   kafka-cluster:
-    enabled: false
+    enabled: true
+  kafka-connect-cluster:
+    enabled: true
+  kafka-ui-redpanda-console:
+    enabled: true
 
 ##-------------------------
 ## COMPONENT CONFIGURATIONS
 ##-------------------------
-#strimzi-cluster-operator:
-#  strimzi-kafka-operator:
-#    kafkaConnect:
-#      image:
-#        registry: "sfplcdocker.int.repositories.cloud.sap"
-#        name: "kafka-with-hana-connector"
-#        tagPrefix: "0.31.0-sap-0.3.3"
+strimzi-kafka-operator:
+  kafkaConnect:
+    image:
+      registry: ""
+#      name: ""
+      tagPrefix: ""
+
+kafka-ui-redpanda-console:
+  console:
+    console:
+      config:
+        kafka:
+          brokers:
+            - my-cluster-kafka-brokers:9092
+        connect:
+          enabled: true
+          clusters:
+            - name: "kafka-connect-cluster"
+              url: "http://my-connect-cluster-connect-api:8083"
