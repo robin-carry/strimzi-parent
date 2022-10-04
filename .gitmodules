@@ -7,3 +7,6 @@
 [submodule "kafka-connect-cluster"]
 	path = kafka-connect-cluster
 	url = https://github.com/robin-carry/kafka-connect-cluster
+[submodule "kafka-ui-redpanda-console"]
+	path = kafka-ui-redpanda-console
+	url = https://github.com/robin-carry/kafka-ui-redpanda-console
